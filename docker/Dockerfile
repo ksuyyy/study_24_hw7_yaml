@@ -1,4 +1,4 @@
-FROM maven:latest
+FROM maven:3.8.6-openjdk-11
 RUN apt update
 RUN apt install git -y
 WORKDIR /app
