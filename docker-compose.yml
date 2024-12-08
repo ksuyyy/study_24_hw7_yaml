@@ -2,10 +2,10 @@
 services:
   build:
     context: ./docker
-  volumes:
-    - type: volume
-      source: app
-      target: /app/boxfuse-sample-java-war-hello/target
+    volumes:
+      - type: volume
+        source: app
+        target: /app/boxfuse-sample-java-war-hello/target
 
   tomcat:
     image: tomcat:8-alpine
