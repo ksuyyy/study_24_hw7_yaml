@@ -5,7 +5,7 @@ services:
   volumes:
     - type: volume
     - source: app
-    - target: app/var/www/html
+    - target: /app/var/www/html
 
   tomcat:
     image: tomcat:8-alpine
