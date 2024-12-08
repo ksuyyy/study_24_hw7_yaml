@@ -3,12 +3,11 @@ services:
   build:
     context: ./docker
   volumes:
-    - "./app:/var/www/html"
+    - app:/var/www/html
 
   tomcat:
     image: tomcat:8-alpine
     ports:
-      - "80:80"
-    restart: "on-failure"
+      - 8080:8080
     volumes:
-      - "./app:/usr/local/tomcat/webapps"
+      - app:/usr/local/tomcat/webapps
