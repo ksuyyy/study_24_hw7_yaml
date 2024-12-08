@@ -3,14 +3,11 @@ services:
   build:
     context: ./docker
   volumes:
-    - app:/app/var/www/html
+    - ./app:/var/www/html
 
   tomcat:
     image: tomcat:8-alpine
     ports:
       - 8080:8080
     volumes:
-      - app:/usr/local/tomcat/webapps
-
-volumes:
-  app:
+      - ./app:/usr/local/tomcat/webapps
