@@ -4,6 +4,7 @@ services:
   build:
     build:
       context: ./docker
+      dockerfile: Dockerfile
     volumes:
       - type: volume
         source: app
