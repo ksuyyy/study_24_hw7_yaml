@@ -3,14 +3,18 @@ services:
   build:
     context: ./docker
   volumes:
-    - app:/var/boxfuse-sample-java-war-hello/target
+    - type: volume
+      source: app
+      target: /app/boxfuse-sample-java-war-hello/target
 
   tomcat:
     image: tomcat:8-alpine
     ports:
-      - 8080:8080
+      - '8080:8080'
     volumes:
-      - app:/usr/local/tomcat/webapps
+    - type: volume
+      source: app
+      target: /usr/local/tomcat/webapps
 
 volumes:
   app:
