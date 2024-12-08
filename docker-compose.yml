@@ -3,8 +3,7 @@ version: '3'
 services:
   build:
     build:
-      context: ./docker
-      dockerfile: Dockerfile
+      context: ./Docker
     volumes:
       - type: volume
         source: app
