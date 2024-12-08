@@ -3,7 +3,7 @@ services:
   build:
     context: ./docker
   volumes:
-    - app:/var/www/html
+    - app:/var/boxfuse-sample-java-war-hello/target
 
   tomcat:
     image: tomcat:8-alpine
